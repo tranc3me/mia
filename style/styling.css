@@ -1,0 +1,322 @@
+html {
+	box-sizing: border-box;
+    text-decoration: none;
+}
+
+*,
+*::after,
+*::before {
+    list-style-type: none;
+	box-sizing: inherit;
+}
+
+/*** This is grid for a wrapper ****/
+.grid{
+    //display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 360px;
+}
+
+/***MODAL BOX STYLING ***/
+/***********************/
+.modal{
+	//display: block !important;
+	position: fixed;
+	background: rgb(7,7,7,0.5);
+	padding: 2% 2%;
+}
+
+.modalbox{
+	width: 90%;
+	height: 90%;
+	margin: 0 auto;
+	box-shadow: 0 2px 10px #111, 0 2px 10px #111;
+	animation-name: modalopen;
+	animation-duration: 1s;
+}
+
+.modalHead{
+	width: 100%;
+	height: 10%;
+	background: #eee;
+}
+.modalBody{
+	height:75%;
+	background: #fff;
+}
+.modalFooter{
+	position: relative;
+	width: 100%;
+	height: 15%;
+	background: #ddd;
+}
+
+.close{
+	font-size: 22px;
+}
+.close:hover, .close:focus{
+	color: #111;
+}
+
+@keyframes modalopen{
+	from{opacity:0}
+	to {opacity:1}
+}
+
+/**PAGE CONTENT **/
+
+header{
+	position: relative;
+	border: 2px solid #111;
+    //height: 400px;
+}
+
+nav{
+	//background: rgb(0,0,0,0.3);
+	position:absolute;
+	margin-left: 5%;
+
+	z-index: 1;
+	height: 70px;
+	//border: 1px solid #111;
+}
+
+/*menu*/
+.menu{
+	width:fit-content;
+
+	margin: 10px auto;
+	-webkit-padding-start: 0;
+	padding-left:10px;
+	background: rgb(4,4,4,0.4);
+	box-shadow: 2px 0 5px 5px rgb(0,0,0,0.2);
+}
+
+
+/*menu icons*/
+.menu>li{
+	display: inline-block;
+	margin-right: 9px;
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	box-shadow: .5px .5px 5px 2px #111;
+	padding: 4px 4px;
+	background: rgb(8,8,8,0.2);
+	border-radius: 1px;
+	font-weight: 800;
+	text-shadow: .5px .5px #090;
+}
+
+/*carousel images */
+
+.carousel-inner img {
+      width: 100%;     /*make them responsive */
+      height: 100%;
+  }
+
+ .carousel-control-prev-icon,
+ .carousel-control-next-icon{
+	 margin-top: 50px;
+ }
+
+
+.aboutUs{
+	position: relative;
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 300px;
+    border: 3px solid red;
+    grid-template-areas:
+    "avatar avatar"
+    "whoweare whoweare";
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //height: 800px;
+    border: 2px solid blue;
+    grid-template-areas:
+    "apartman1 apartman1"
+    "apartman2 apartman2"
+}
+
+footer{
+	position: relative;
+	height: 200px;
+    border: 2px solid #111;
+    background: #434343;
+}
+
+/*About US section */
+.avatarPicture{
+    grid-area: avatar;
+    margin: 5px auto;
+    height: 100px;
+    width: 150px;
+    border: 2px solid #111;
+	border-radius: 50%;
+	background: #00aa;
+	box-shadow: 1px 0 5px 2px #00cc;
+	z-index: -1;
+}
+
+.logo{
+	position: absolute;
+	line-height: 100px;
+	left: 50%;
+	transform: translate(-50%,0);
+	font-size: 45px;
+	font-family: Chiller;
+	font-weight: 800;
+	z-index: 2;
+	opacity: 1;
+	color: #000;
+}
+.whoweare{
+    grid-area: whoweare;
+    border: 1px solid #111;
+    height: 180px;
+}
+
+/*Apartmani slike section */
+.apartman1{
+    grid-area: apartman1;
+    border: 1px solid black;
+    //height: 400px;
+    //background-color: #ccc;
+    //padding-bottom: 10px;
+}
+
+.apartman2{
+    grid-area: apartman2;
+    border: 1px solid black;
+    //height: 500px;
+    background-color: #999;
+    //padding-bottom: 20px;
+}
+
+/*galerija slika ilitiga unutarnja sekcija apartmana */
+
+
+
+
+
+/***************************/
+/*THIS IS THE INFO SECTION */
+/***************************/
+.mainInfo{
+	display: flex;
+	flex-flow: row nowrap;
+	margin-top: 5px;
+    //height: 230px;
+    border: 1px dashed purple;
+	//padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.sidebar{
+	//border:0.5px solid #111;
+	width: 30%;
+	max-height: 280px;
+	height: 220px;
+	box-shadow: 1px 1px 5px 3px #ccc;
+	background: #eee;
+	border-radius: 2px;
+	padding: 0 5px 0 5px;
+}
+
+.info{
+	background: #ddd;
+	width: 70%;
+	min-height: 100%;
+	//border: 1px solid red;
+	padding: 10px;
+	margin-left: 10px;
+
+}
+
+
+/* ICONS STYLE */
+
+.icons{
+
+	display: block !important;
+	margin-bottom: 10px;
+	font-size: 20px !important;
+}
+
+.iconsWrap {
+	background: #fff;
+	border-top: 1px solid black;
+	border-radius: 5px;
+	padding: 5px 0 2px 5px;
+	box-shadow: .5px .5px 10px #111;
+}
+
+/*Ovo je desno od ikona */
+.infoWrap{
+	background: #eee;
+}
+
+.offer{
+	box-shadow: 2px 2px 5px 3px #ddd;
+	width: fit-content;
+	margin: 0 auto 10px auto;
+	padding: 5px;
+}
+
+
+/**Tablica **/
+
+.row{
+	margin: 0 auto !important;
+	display: flex;
+	flex-flow: row nowrap !important;
+	width: 100%;
+	border-top: 1px solid #ddd;
+	min-height: 30px;
+	background: #fff;
+}
+
+.title{
+	width: 40%;
+	border-right: 2px solid #888;
+}
+
+.about{
+	width: 80%;
+}
+
+/*** ispod tablice CIJENA I JOŠ NEĐTO **/
+
+.price1{
+	display: block;
+	border: 1px solid red;
+	width: 100px;
+	height: 40px;
+	float: right;
+	margin: 10px 10px 0 auto;
+	border-radius: 3px;
+	box-shadow: 1px 1px 5px red;
+}
+
+/*THIS IS THE FOOTER */
+/********************/
+
+
+
+.innerFooter{
+	position: absolute;
+	width:100%;
+	height:20px;
+	bottom: 0;
+	background: #333;
+	color: white;
+}
